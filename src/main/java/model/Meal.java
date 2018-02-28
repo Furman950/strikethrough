@@ -29,8 +29,8 @@ public class Meal implements Comparable<Meal>
 	 * @param cholest
 	 * @param numServing
 	 */
-	public Meal(String foodName, int calories, int totalFat, int sodium, int carbs, int protein, int sugar, int satFat,
-			int unsatFat, int cholest, int numServing) 
+	public Meal(String foodName, int calories, int totalFat, int satFat, int unsatFat, int sodium, int carbs, int sugar, int cholest, int protein,
+				 int numServing)
 	{
 		this.setFoodName(foodName);
 		this.setCalories(calories);
