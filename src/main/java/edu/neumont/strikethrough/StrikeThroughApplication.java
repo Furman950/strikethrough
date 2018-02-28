@@ -24,6 +24,7 @@ public class StrikeThroughApplication extends Application
         stage.sizeToScene();
         stage.setScene(scene);
         stage.show();
+
 	}
 
 }
