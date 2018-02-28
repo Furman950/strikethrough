@@ -10,12 +10,11 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="800" maxWidth="1000" minHeight="400" minWidth="500" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
 
    <children>
-      <ComboBox fx:id="Firstbox" layoutX="780.0" layoutY="492.0" prefHeight="65.0" prefWidth="361.0">
-      
-      </ComboBox>
-      <Button fx:id="Exit" layoutX="1737.0" layoutY="14.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="183.0" text="Exit" />
+      <Button fx:id="Login" text="Login" layoutX="400" layoutY="350" prefWidth="200" prefHeight="100" />
+      <Button fx:id="Register" text="Register" layoutX="400" layoutY="500" prefWidth="200" prefHeight="100"  />
+      <Button fx:id="Logout" text="Logout" layoutX="899" layoutY="5" prefWidth="100"  />
    </children>
 </AnchorPane>
