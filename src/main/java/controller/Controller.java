@@ -17,6 +17,7 @@ public class Controller
 	private UserData userD = new UserData();
 	private boolean login = false;
 	private User logs;
+	private String fileName = "UserData.rac";
 	@FXML
 	private TextField uName, pWord, fName;
 	
