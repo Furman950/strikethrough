@@ -5,10 +5,7 @@ import exceptions.UserAlreadyExistsException;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
-import model.Birthday;
-import model.Meal;
-import model.User;
-import model.UserData;
+import model.*;
 
 import java.io.*;
 
@@ -28,13 +25,24 @@ public class Controller
 	
 	private String mealName, calories, totalFat, satFat, unsatFat, sodium, carbs, sugar, protein, cholest, numServing;
 
-	@FXML private TextField mName, kalories, tFat, sFat, usFat, NaCl, karbs, shugar, brotein, cholset, nServing;
+	@FXML
+	private TextField mName, kalories, tFat, sFat, usFat, NaCl, karbs, shugar, brotein, cholset, nServing;
 	private Birthday birthday;
+
+	@FXML
+	private TextField tWeight;
+
+	private String trackWeight;
+
+	@FXML
+	private TextField wName, sets, reps;
+
+	private String workoutName, set, rep;
 	
 	/**
 	 * Creates a new user profile
 	 */
-	public void register() 
+	public void register(MouseEvent e)
 	{
 		username = uName.getText();
 		password = pWord.getText();
@@ -79,7 +87,7 @@ public class Controller
 	/**
 	 * logs in an existing profile
 	 */
-	public void login() 
+	public void login(MouseEvent e)
 	{
 		username = uName.getText();
 		password = pWord.getText();
@@ -118,16 +126,21 @@ public class Controller
 
 		Meal meal = new Meal(mealName, Integer.parseInt(calories), Integer.parseInt(totalFat), Integer.parseInt(satFat), Integer.parseInt(unsatFat),
 				Integer.parseInt(sodium), Integer.parseInt(carbs), Integer.parseInt(sugar), Integer.parseInt(cholest), Integer.parseInt(protein), Integer.parseInt(numServing));
+
+		userD.setMeals(meal);
 	}
 	
 	
 	public void weightTracker(MouseEvent e)
 	{
-		
+		trackWeight = tWeight.getText();
+
+		WeightTracker tracked = new WeightTracker(Integer.parseInt(trackWeight));
+
+		userD.setWeights(tracked);
 	}
 	public void exit(MouseEvent e)
 	{
-
 		System.exit(0);
 	}
 
@@ -156,5 +169,15 @@ public class Controller
             }
         }
     }
+	public void customWorkout(MouseEvent e)
+	{
+		workoutName = wName.getText();
+		set = sets.getText();
+		rep = reps.getText();
+
+		Workout workout = new CustomWorkout(Integer.parseInt(rep), Integer.parseInt(set),workoutName);
+
+		userD.setWorkouts(workout);
+	}
 	
 }
