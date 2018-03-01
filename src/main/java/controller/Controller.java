@@ -10,6 +10,8 @@ import model.Meal;
 import model.User;
 import model.UserData;
 
+import java.io.*;
+
 public class Controller 
 {
 	private UserData userD = new UserData();
@@ -127,5 +129,31 @@ public class Controller
 
 		System.exit(0);
 	}
+
+    /**
+     * Saves all users and their data
+     *
+     * @throws IOException
+     */
+    public void saveData() throws IOException {
+        try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(fileName))) {
+            out.writeObject(this.userD);
+        }
+    }
+
+    /**
+     * Loads all the users and their data
+     *
+     * @throws IOException
+     */
+    public void loadData() throws IOException {
+        try(ObjectInputStream in = new ObjectInputStream(new FileInputStream(fileName))){
+            try {
+                this.userD = (UserData) in.readObject();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 	
 }
