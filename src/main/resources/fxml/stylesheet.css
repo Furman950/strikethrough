@@ -20,3 +20,8 @@
     -fx-font-size: 2em;
     -fx-alignment: center;
 }
+.button {
+    -fx-background-color: #ff0000;
+    -fx-text-fill: #ffffff;
+}
+

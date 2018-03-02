@@ -14,7 +14,7 @@ public class WeightTrackerController {
     {
         WeightTracker tracked = new WeightTracker(Integer.parseInt(trackWeight));
 
-        userD.setWeights(tracked);
+        //userD.setWeights(tracked);
     }
 
 }

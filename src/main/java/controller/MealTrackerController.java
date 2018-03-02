@@ -28,6 +28,6 @@ public class MealTrackerController {
         Meal meal = new Meal(mealName, Integer.parseInt(calories), Integer.parseInt(totalFat), Integer.parseInt(satFat), Integer.parseInt(unsatFat),
                 Integer.parseInt(sodium), Integer.parseInt(carbs), Integer.parseInt(sugar), Integer.parseInt(cholest), Integer.parseInt(protein), Integer.parseInt(numServing));
 
-        userD.setMeals(meal);
+        //userD.setMeals(meal);
     }
 }
