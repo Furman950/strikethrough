@@ -4,9 +4,12 @@
 <?import javafx.scene.control.DialogPane?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="800" maxWidth="1000" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
+<?import javafx.scene.control.Label?>
+<AnchorPane fx:id="WeightTracker" maxHeight="800" maxWidth="1000" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.WeightTrackerController">
     <children>
-      <ComboBox layoutX="421.0" layoutY="368.0" prefHeight="65.0" prefWidth="182.0" promptText="Date" />
-      <DialogPane layoutX="320.0" layoutY="60.0" contentText="Weight Tracker" style="-fx-text-alignment: center;"/>
+        <DialogPane fx:id="weightTrackerTitle" contentText="Weight Tracker" layoutX="320.0" layoutY="60.0" style="-fx-text-alignment: center;" />
+        <ComboBox layoutX="421.0" layoutY="368.0" prefHeight="65.0" prefWidth="182.0" promptText="Date" />
+
+        <Label text="User Name:"/>
    </children>
 </AnchorPane>

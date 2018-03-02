@@ -1,5 +1,22 @@
+/*
 .root {
     -fx-background-image:url('Bape.jpg');
     -fx-font-size: 2em;
 }
+*/
 
+#WeightTracker {
+    -fx-background-image: url('Bape.jpg');
+    -fx-text-alignment: center;
+    -fx-font-size: 3em;
+}
+
+#weightTrackerTitle {
+    -fx-text-alignment: center;
+}
+
+#RegisterUser {
+    -fx-background-image: url('Bape.jpg');
+    -fx-font-size: 2em;
+    -fx-alignment: center;
+}
