@@ -2,3 +2,8 @@
     -fx-background-image:url('Bape.jpg');
     -fx-font-size: 2em;
 }
+
+.button {
+    -fx-background-color: #ff0000;
+    -fx-text-fill: #ffffff;
+}

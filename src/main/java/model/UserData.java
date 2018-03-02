@@ -1,16 +1,19 @@
 package model;
 
 import java.io.Serializable;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 public class UserData implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
 	private List<Workout> workouts;
-	private List<Meal> meals;
+	private Map<String, Meal> meals;
 	private List<User> users;
-	private List<WeightTracker> weights;
+	private Map<String, WeightTracker> weights;
 	
 	/**
 	 * @return the workouts
@@ -27,14 +30,14 @@ public class UserData implements Serializable {
 	/**
 	 * @return the meals
 	 */
-	public List<Meal> getMeals() {
+	public Map<String, Meal> getMeals() {
 		return meals;
 	}
 	/**
 	 * @param meals the meals to set
 	 */
-	public void setMeals(Meal meal) {
-		this.meals.add(meal);
+	public void setMeals(String date, Meal meal) {
+		this.meals.put(date,meal);
 	}
 	/**
 	 * @return the users
@@ -51,14 +54,14 @@ public class UserData implements Serializable {
 	/**
 	 * @return the weights
 	 */
-	public List<WeightTracker> getWeights() {
+	public Map<String, WeightTracker> getWeights() {
 		return weights;
 	}
 	/**
 	 * @param weights the weights to set
 	 */
-	public void setWeights(WeightTracker weight) {
-		this.weights.add(weight);
+	public void setWeights(String date, WeightTracker weight) {
+		this.weights.put(date, weight);
 	}
 	
 }

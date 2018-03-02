@@ -8,6 +8,8 @@ import javafx.scene.input.MouseEvent;
 import model.*;
 
 import java.io.*;
+import java.util.Calendar;
+import java.util.Date;
 
 public class Controller 
 {
@@ -23,10 +25,10 @@ public class Controller
 	
 	private String firstName, username, password, height1, weight1, goalWeight, bMonth, bDay, bYear;
 	
-	private String mealName, calories, totalFat, satFat, unsatFat, sodium, carbs, sugar, protein, cholest, numServing;
+	private String mealName, calories, totalFat, satFat, unsatFat, sodium, carbs, sugar, protein, cholest, numServing, date;
 
 	@FXML
-	private TextField mName, kalories, tFat, sFat, usFat, NaCl, karbs, shugar, brotein, cholset, nServing;
+	private TextField mName, kalories, tFat, sFat, usFat, NaCl, karbs, shugar, brotein, cholset, nServing, calendar;
 	private Birthday birthday;
 
 	@FXML
@@ -123,21 +125,23 @@ public class Controller
 		protein = brotein.getText();
 		cholest = cholset.getText();
 		numServing = nServing.getText();
+		date = calendar.getText();
 
 		Meal meal = new Meal(mealName, Integer.parseInt(calories), Integer.parseInt(totalFat), Integer.parseInt(satFat), Integer.parseInt(unsatFat),
 				Integer.parseInt(sodium), Integer.parseInt(carbs), Integer.parseInt(sugar), Integer.parseInt(cholest), Integer.parseInt(protein), Integer.parseInt(numServing));
 
-		userD.setMeals(meal);
+		userD.setMeals(date, meal);
 	}
 	
 	
 	public void weightTracker(MouseEvent e)
 	{
 		trackWeight = tWeight.getText();
+		date = calendar.getText();
 
 		WeightTracker tracked = new WeightTracker(Integer.parseInt(trackWeight));
 
-		userD.setWeights(tracked);
+		userD.setWeights(date, tracked);
 	}
 	public void exit(MouseEvent e)
 	{
