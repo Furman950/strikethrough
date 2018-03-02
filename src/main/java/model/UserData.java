@@ -19,7 +19,7 @@ public class UserData implements Serializable {
 		return workouts;
 	}
 	/**
-	 * @param workouts the workouts to set
+	 * @param workout the workouts to set
 	 */
 	public void setWorkouts(Workout workout) {
 		this.workouts.add(workout);
@@ -31,7 +31,7 @@ public class UserData implements Serializable {
 		return meals;
 	}
 	/**
-	 * @param meals the meals to set
+	 * @param meal the meals to set
 	 */
 	public void setMeals(Meal meal) {
 		this.meals.add(meal);
@@ -43,7 +43,7 @@ public class UserData implements Serializable {
 		return users;
 	}
 	/**
-	 * @param users the users to set
+	 * @param user the users to set
 	 */
 	public void setUsers(User user) {
 		this.users.add(user);
@@ -55,7 +55,7 @@ public class UserData implements Serializable {
 		return weights;
 	}
 	/**
-	 * @param weights the weights to set
+	 * @param weight the weights to set
 	 */
 	public void setWeights(WeightTracker weight) {
 		this.weights.add(weight);
