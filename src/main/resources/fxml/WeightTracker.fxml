@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="800" maxWidth="1000" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
+    <children>
+      <ComboBox layoutX="421.0" layoutY="368.0" prefHeight="65.0" prefWidth="182.0" promptText="Date" />
+      <DialogPane layoutX="320.0" layoutY="60.0" contentText="Weight Tracker" style="-fx-text-alignment: center;"/>
+   </children>
+</AnchorPane>
