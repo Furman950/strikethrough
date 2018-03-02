@@ -1,14 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Reflection?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane fx:controller="controller.MainMenuController" maxHeight="800" maxWidth="1000" minHeight="400" minWidth="500" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+
+<AnchorPane fx:id="MainMenu" maxHeight="800" maxWidth="1020" minHeight="400" minWidth="500" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
 
     <children>
-        <Button fx:id="Ldasfin" layoutX="400" layoutY="350" prefHeight="100" prefWidth="200" text="btn1" />
-        <Button fx:id="adfas" layoutX="400" layoutY="500" prefHeight="100" prefWidth="200" text="btn2" />
-        <Button fx:id="adfasf" layoutX="836.0" layoutY="5" prefHeight="65.0" prefWidth="163.0" text="Logout" />
-      <Button layoutX="446.0" layoutY="653.0" mnemonicParsing="false" text="Button" />
+        <Button fx:id="WeightTracker" layoutX="134.0" layoutY="350.0" prefHeight="100" prefWidth="253.0" text="Weight Tracker" textFill="WHITE">
+         <effect>
+            <DropShadow height="255.0" radius="127.0" spread="0.5" width="255.0" />
+         </effect>
+        </Button>
+        <Button fx:id="MealTracker" layoutX="389.0" layoutY="512.0" prefHeight="100" prefWidth="223.0" text="Meal Tracker" textFill="WHITE">
+         <effect>
+            <DropShadow height="255.0" radius="127.0" spread="0.5" width="255.0" />
+         </effect>
+        </Button>
+        <Button fx:id="Logout" layoutX="865.0" layoutY="14.0" prefHeight="65.0" prefWidth="141.0" text="Logout" textFill="WHITE">
+         <effect>
+            <DropShadow height="255.0" radius="127.0" spread="0.5" width="255.0" />
+         </effect>
+        </Button>
+        <Button fx:id="WorkoutPlanner" layoutX="612.0" layoutY="350.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="267.0" text="Workout Planner" textFill="WHITE">
+         <effect>
+            <DropShadow height="255.0" radius="127.0" spread="0.5" width="255.0" />
+         </effect>
+        </Button>
+        <Label fx:id="DiaMainMenu" alignment="CENTER" layoutX="288.0" layoutY="86.0" prefHeight="143.0" prefWidth="426.0" text="Main Menu" textFill="WHITE">
+         <font>
+            <Font name="Stencil" size="72.0" />
+         </font>
+         <effect>
+            <Reflection fraction="0.25" />
+         </effect>
+      </Label>
     </children>
 </AnchorPane>

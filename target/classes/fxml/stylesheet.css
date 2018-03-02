@@ -3,6 +3,7 @@
     -fx-background-image:url('Bape.jpg');
     -fx-font-size: 2em;
 }
+<<<<<<< HEAD
 */
 
 #WeightTracker {
@@ -25,3 +26,18 @@
     -fx-text-fill: #ffffff;
 }
 
+=======
+#LoginPage {
+    -fx-background-image:url('BestBape.png') ;
+}
+#MainMenu {
+    -fx-background-image:url('BestestBape.png') ;
+}
+#DiaMainMenu{
+
+    -fx-background-color: red;
+}
+.button{
+    -fx-background-color: red;
+}
+>>>>>>> BBC
