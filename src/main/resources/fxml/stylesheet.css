@@ -1,9 +1,3 @@
-#WeightTracker {
-    -fx-background-image: url('Bape.jpg');
-    -fx-text-alignment: center;
-    -fx-font-size: 3em;
-}
-
 #weightTrackerTitle {
     -fx-text-alignment: center;
 }
