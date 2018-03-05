@@ -24,7 +24,7 @@
             <Font name="Stencil" size="36.0" />
          </font>
       </Button>
-      <Button layoutX="445.0" layoutY="672.0" mnemonicParsing="false" text="Login">
+      <Button id="NewerLogin" layoutX="435.0" layoutY="681.0" mnemonicParsing="false" text="Login">
          <font>
             <Font name="Stencil" size="36.0" />
          </font>

@@ -4,10 +4,12 @@ import exceptions.InvalidBirthdayException;
 import exceptions.UserAlreadyExistsException;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import model.*;
 
 import java.io.*;
@@ -19,6 +21,9 @@ public class RegisterUserController {
 
     @FXML
     private TextField uName, pWord, fName, weight, goalWeight, birthday;
+
+    @FXML
+    private AnchorPane RegisterUser, MainMenu;
 
     @FXML
     private Label label;
@@ -40,7 +45,7 @@ public class RegisterUserController {
      * Creates a new user profile
      */
 
-    public void register(MouseEvent e) {
+    public void register(MouseEvent e) throws IOException {
         alert.setTitle("Invalid Input");
         try {
             System.out.println("In register method");
@@ -83,7 +88,7 @@ public class RegisterUserController {
     /**
      * logs in an existing profile
      */
-    public void login() {
+    public void login() throws IOException {
         username = uName.getText();
         password = pWord.getText();
 
@@ -91,6 +96,8 @@ public class RegisterUserController {
             if (u.getUsername().equalsIgnoreCase(username)) {
                 if (u.getPassword().equals(password)) {
                     strikethrough.setUserLoggedIn(u);
+                    MainMenu = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/MainMenu.fxml"));
+                    RegisterUser.getChildren().setAll(MainMenu);
                 }
             }
         }
