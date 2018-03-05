@@ -1,5 +1,9 @@
 package model;
 
+import exceptions.InvalidBirthdayException;
+
+import java.util.Calendar;
+
 public class Birthday {
 	private int day;
 	private int month;
@@ -12,8 +16,49 @@ public class Birthday {
 		this.setMonth(month);
 		this.setYear(year);
 	}
-	
-	/**
+
+	public Birthday(String date) {
+        String[] birthday = date.split("/");
+        System.out.println(birthday[0]);
+        System.out.println(birthday[1]);
+        System.out.println(birthday[2]);
+
+        if (birthday.length != 3){
+            System.out.println("in 3");
+            throw new InvalidBirthdayException("Invalid birthday format!!");
+
+        }
+
+
+        try {
+            month = Integer.parseInt(birthday[0].trim());
+            day = Integer.parseInt(birthday[1].trim());
+            year = Integer.parseInt(birthday[2].trim());
+
+            if (day <= 0 || day > 31) {
+                System.out.println("Day");
+                throw new InvalidBirthdayException("Invalid day");
+            }
+
+
+            if (month <= 0 || month > 12) {
+                System.out.println("Month");
+                throw new InvalidBirthdayException("Invalid month");
+            }
+
+
+            if (year < 1900 || year > Calendar.getInstance().get(Calendar.YEAR)) {
+                throw new InvalidBirthdayException("Invalid year");
+            }
+
+        }
+        catch (NumberFormatException e) {
+            throw new InvalidBirthdayException("Invalid birthday format");
+        }
+    }
+
+
+    /**
 	 * @return the day
 	 */
 	public int getDay() {
