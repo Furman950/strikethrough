@@ -38,7 +38,8 @@ public class MealTrackerController {
         Platform.runLater( () -> label.requestFocus() );
     }
 
-    public void mealTracker(MouseEvent e) {
+    public void mealTracker(MouseEvent e)
+    {
         date = day.getText();
     }
 

@@ -17,8 +17,7 @@ public class StrikeThroughApplication extends Application
 
 	@Override
 	public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/MealInfo.fxml"));
-
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/LoginPage.fxml"));
         Scene scene = new Scene(root);
         scene.getStylesheets().add(getClass().getResource("/fxml/stylesheet.css").toExternalForm().toString());
         stage.setTitle("Awesomeness of awesome");
