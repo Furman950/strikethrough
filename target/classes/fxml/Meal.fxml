@@ -2,25 +2,38 @@
 
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
+<<<<<<< HEAD
 <?import javafx.scene.control.Label?>
+=======
+>>>>>>> lilFur
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
+<<<<<<< HEAD
 <AnchorPane fx:id="meal" maxHeight="800" maxWidth="1000" minHeight="400" minWidth="500" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MealTrackerController">
    <children>
       <TextField fx:id="day" alignment="CENTER" layoutX="405.0" layoutY="335.0" promptText="Enter a Date" />
       <Button fx:id="Submit" alignment="CENTER" contentDisplay="CENTER" layoutX="410.0" layoutY="510.0" mnemonicParsing="false" onMouseClicked="#mealTracker" text="Submit" textAlignment="CENTER" textFill="WHITE">
+=======
+<AnchorPane fx:id="meal" maxHeight="800" maxWidth="1000" minHeight="400" minWidth="500" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
+   <children>
+      <TextField fx:id="Date" alignment="CENTER" layoutX="314.0" layoutY="335.0" promptText="Enter a Date" />
+      <Button fx:id="Submit" alignment="CENTER" contentDisplay="CENTER" layoutX="410.0" layoutY="510.0" mnemonicParsing="false" text="Submit" textAlignment="CENTER" textFill="WHITE">
+>>>>>>> lilFur
          <font>
             <Font name="Stencil" size="36.0" />
          </font>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
+<<<<<<< HEAD
       <Label fx:id="label" layoutX="238.0" layoutY="125.0" text="Meal Tracker" textFill="WHITE">
          <font>
             <Font name="Stencil" size="72.0" />
          </font>
       </Label>
+=======
+>>>>>>> lilFur
    </children>
 </AnchorPane>

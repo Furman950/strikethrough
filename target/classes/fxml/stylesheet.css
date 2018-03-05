@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
 .root {
     -fx-background-image:url('Bape.jpg');
@@ -5,6 +6,8 @@
 }
 */
 
+=======
+>>>>>>> lilFur
 #WeightTracker {
     -fx-background-image: url('Bape.jpg');
     -fx-text-alignment: center;
@@ -20,6 +23,7 @@
     -fx-font-size: 2em;
     -fx-alignment: center;
 }
+
 .button {
     -fx-background-color: #ff0000;
     -fx-text-fill: #ffffff;
@@ -28,6 +32,7 @@
 #LoginPage {
     -fx-background-image:url('BestBape.png') ;
 }
+
 #MainMenu {
     -fx-background-image:url('BestestBape.png') ;
 }

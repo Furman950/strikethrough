@@ -7,13 +7,17 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import model.Meal;
+import model.User;
 import model.UserData;
+
+import java.io.IOException;
 
 import static controller.StrikethroughMainController.userD;
 
 public class MealTrackerController {
 
-    private UserData userD = new UserData();
+    private StrikethroughMainController controller = new StrikethroughMainController();
+    private User userLoggedIn = controller.getUserLoggedIn();
 
     private String mealName, calories, totalFat, satFat, unsatFat, sodium, carbs, sugar, protein, cholest, numServing, date;
 
@@ -25,6 +29,9 @@ public class MealTrackerController {
 
     @FXML
     private Label label;
+
+    public MealTrackerController() throws IOException {
+    }
 
     @FXML
     public void initialize() {
@@ -52,7 +59,7 @@ public class MealTrackerController {
         Meal meal = new Meal(mealName, Integer.parseInt(calories), Integer.parseInt(totalFat), Integer.parseInt(satFat), Integer.parseInt(unsatFat),
                 Integer.parseInt(sodium), Integer.parseInt(carbs), Integer.parseInt(sugar), Integer.parseInt(cholest), Integer.parseInt(protein), Integer.parseInt(numServing), date);
 
-        userD.setMeals(date, meal);
+        userLoggedIn.setMeals(date, meal);
         System.out.println("click");
     }
 }
