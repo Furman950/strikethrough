@@ -1,6 +1,15 @@
 package model;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class User {
+
+	private List<Workout> workouts = new ArrayList<>();
+	private Map<String, Meal> meals = new HashMap<>();
+	private Map<String, WeightTracker> weights = new HashMap<>();
 	
 	private String username;
 	private String password;
@@ -18,6 +27,41 @@ public class User {
 		this.setPassword(password);
 		this.setFirstName(firstName);
 	}
+
+	/**
+	 * @return the workouts
+	 */
+	public List<Workout> getWorkouts() {
+		return workouts;
+	}
+	/**
+	 * @param workout the workouts to set
+	 */
+	public void setWorkouts(Workout workout) {
+		this.workouts.add(workout);
+	}
+	/**
+	 * @return the meals
+	 */
+	public Map<String, Meal> getMeals() {
+		return meals;
+	}
+	/**
+	 * @param meal the meals to set
+	 */
+	public void setMeals(String date, Meal meal) {
+		this.meals.put(date,meal);
+	}
+
+	public Map<String, WeightTracker> getWeights() {
+		return weights;
+	}
+	/**
+	 * @param weight the weights to set
+	 */
+	public void setWeights(String date, WeightTracker weight) {
+		this.weights.put(date, weight);
+	}
 	
 	/**
 	 * @return the user
@@ -26,7 +70,7 @@ public class User {
 		return username;
 	}
 	/**
-	 * @param user the user to set
+	 * @param username the user to set
 	 */
 	public void setUsername(String username) {
 		this.username = username;
@@ -114,10 +158,6 @@ public class User {
 				"Birthday: " + this.getBirthday() + "\n";
 				
 	}
-	
-	/**
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 */
 	
 	@Override
 	public boolean equals(Object obj) {

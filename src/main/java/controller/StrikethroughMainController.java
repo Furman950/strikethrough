@@ -1,6 +1,5 @@
 package controller;
 
-import javafx.scene.input.MouseEvent;
 import model.User;
 import model.UserData;
 
@@ -11,8 +10,24 @@ public class StrikethroughMainController {
     public static User userLoggedIn;
     private String fileName = "UserData.rac";
 
+    public StrikethroughMainController() throws IOException {
+        loadData();
+        System.out.println("Loaded data");
+        if (userD == null) {
+            userD.setUsers(new User("Admin", "Admin", "Admin"));
+        }
+    }
+
     public UserData getUserD() {
         return userD;
+    }
+
+    public User getUserLoggedIn() {
+        return userLoggedIn;
+    }
+
+    public void setUserLoggedIn(User userLoggedIn) {
+        this.userLoggedIn = userLoggedIn;
     }
 
     /**
@@ -24,10 +39,12 @@ public class StrikethroughMainController {
         try(ObjectInputStream in = new ObjectInputStream(new FileInputStream(fileName))){
             try {
                 this.userD = (UserData) in.readObject();
-            } catch (ClassNotFoundException e) {
+            }
+            catch (ClassNotFoundException e) {
                 e.printStackTrace();
             }
         }
+        catch (FileNotFoundException f) {}
     }
 
     /**
