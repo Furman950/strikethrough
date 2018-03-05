@@ -38,3 +38,12 @@
 .button{
     -fx-background-color: red;
 }
+#mealInfo{
+    -fx-background-image:url("BestestBape.png") ;
+}
+#meal{
+    -fx-background-image:url("BestestBape.png") ;
+}
+#label{
+    -fx-background-color: red;
+}

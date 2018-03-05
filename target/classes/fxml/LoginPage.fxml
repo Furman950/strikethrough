@@ -10,11 +10,13 @@
       <Button fx:id="Login" layoutX="415.0" layoutY="424.0" prefHeight="100" prefWidth="200" text="Login" textFill="WHITE">
          <effect>
             <DropShadow height="255.0" radius="127.0" spread="0.5" width="255.0" />
-         </effect></Button>
+         </effect>
+      </Button>
       <Button fx:id="Register" layoutX="415.0" layoutY="624.0" prefHeight="100" prefWidth="200" text="Register" textFill="WHITE">
          <effect>
             <DropShadow height="255.0" radius="127.0" spread="0.5" width="255.0" />
-         </effect></Button>
+         </effect>
+      </Button>
       <Button fx:id="Logout" layoutX="865.0" layoutY="14.0" prefHeight="65.0" prefWidth="141.0" text="Logout" textFill="WHITE">
          <effect>
             <DropShadow height="255.0" radius="127.0" spread="0.5" width="255.0" />
