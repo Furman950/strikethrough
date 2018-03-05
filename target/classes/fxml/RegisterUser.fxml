@@ -5,7 +5,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="RegisterUser" maxHeight="800" maxWidth="1000" minHeight="400" minWidth="500" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegisterUserController">
+<AnchorPane fx:id="RegisterUser" maxHeight="800" maxWidth="1020" minHeight="400" minWidth="500" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegisterUserController">
     <children>
         <Label fx:id="label" layoutX="446.0" layoutY="42.0" style="-fx-background-color: red;" text="Register" textFill="white" />
         <TextField fx:id="uName" layoutX="343.0" layoutY="267.0" promptText="Username" />
@@ -14,6 +14,6 @@
         <TextField fx:id="birthday" layoutX="343.0" layoutY="628.0" promptText="Birthday mm/dd/yyyy" />
         <TextField fx:id="goalWeight" layoutX="343.0" layoutY="543.0" promptText="Weight Goal" />
         <TextField fx:id="fName" layoutX="343.0" layoutY="177.0" promptText="First Name" />
-        <Button fx:id="register" layoutX="455.0" layoutY="709.0" mnemonicParsing="false" onMouseClicked="#register" text="Register" />
+        <Button fx:id="register" layoutX="436.0" layoutY="709.0" mnemonicParsing="false" onMouseClicked="#register" text="Register" />
     </children>
 </AnchorPane>
