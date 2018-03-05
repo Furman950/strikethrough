@@ -12,4 +12,6 @@ public class WorkoutController
     public void initialize() {
         Platform.runLater( () -> label.requestFocus() );
     }
+
+
 }

@@ -9,8 +9,8 @@ public class UserData implements Serializable {
 
 	private List<Workout> workouts = new ArrayList<>();
 	private Map<String, Meal> meals = new HashMap<String, Meal>();
-	private List<User> users;
-	private Map<String, WeightTracker> weights;
+	private List<User> users = new ArrayList<>();
+	private Map<String, WeightTracker> weights = new HashMap<>();
 	
 	/**
 	 * @return the workouts
