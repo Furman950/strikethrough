@@ -1,10 +1,8 @@
 package controller;
 
-import exceptions.InvalidUsernameOrPasswordException;
 import exceptions.UserAlreadyExistsException;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
@@ -15,7 +13,7 @@ import java.io.*;
 public class RegisterUserController {
     private StrikethroughMainController strikethrough = new StrikethroughMainController();
     private UserData userD = strikethrough.getUserD();
-    private boolean login = false;
+    private User userLoggedIn;
 
     @FXML
     private TextField uName, pWord, fName, weight, goalWeight, birthday;
@@ -28,6 +26,8 @@ public class RegisterUserController {
         Platform.runLater( () -> label.requestFocus() );
     }
 
+    public RegisterUserController() throws IOException {}
+
     private String username, password, firstName, uWeight, uGoalWeight, uBirthday;
 
 
@@ -36,6 +36,7 @@ public class RegisterUserController {
      */
 
     public void register(MouseEvent e) {
+        System.out.println("In register method");
         username = uName.getText();
         password = pWord.getText();
         firstName = fName.getText();
@@ -52,6 +53,7 @@ public class RegisterUserController {
         User user = new User(username, password, firstName);
         userD.setUsers(user);
         login();
+        System.out.println("Successfully created a new user");
     }
 
     /**
@@ -64,13 +66,15 @@ public class RegisterUserController {
         for (User u : this.userD.getUsers()) {
             if (u.getUsername().equalsIgnoreCase(username)) {
                 if (u.getPassword().equals(password)) {
-                    login = true;
-
+                    strikethrough.setUserLoggedIn(u);
                 }
             }
         }
-        if (!login) {
-            throw new InvalidUsernameOrPasswordException("Username or Password is incorrect.");
+    }
+
+    public void printUserData(MouseEvent mouseEvent) {
+        if (userD != null) {
+            System.out.println(userD.toString());
         }
     }
 }
