@@ -1,11 +1,14 @@
 package model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class User {
+public class User implements Serializable{
+
+    private static final long serialVersionUID = 1L;
 
 	private List<Workout> workouts = new ArrayList<>();
 	private Map<String, Meal> meals = new HashMap<>();

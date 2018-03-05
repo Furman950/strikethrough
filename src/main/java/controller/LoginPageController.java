@@ -1,28 +1,34 @@
 package controller;
 
-import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import model.UserData;
 import java.io.IOException;
 
 public class LoginPageController {
-//    @FXML
-//    Button Login,
+    StrikethroughMainController strikethrough = new StrikethroughMainController();
     @FXML
-    private AnchorPane LoginPage, RegisterUser;
+    private AnchorPane LoginPage;
+
+    @FXML
+    private AnchorPane RegisterUser, NewerLoginPage;
+
+    public LoginPageController() throws IOException {
+    }
 
     @FXML
     public void register(MouseEvent e) throws IOException {
         RegisterUser = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/RegisterUser.fxml"));
         LoginPage.getChildren().setAll(RegisterUser);
     }
-//@FXML
-//public void initialize() {
-////    Platform.runLater( () -> label.requestFocus() );
-//}
 
+    public void login(MouseEvent mouseEvent) throws IOException {
+        NewerLoginPage = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/NewerLoginPage.fxml"));
+        LoginPage.getChildren().setAll(NewerLoginPage);
+    }
+
+    public void exit(MouseEvent mouseEvent) throws IOException {
+        strikethrough.exit();
+    }
 }

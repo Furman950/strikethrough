@@ -7,15 +7,15 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="NewerLoginPage" maxHeight="1080.0" maxWidth="1920.0" minHeight="400" minWidth="500" prefHeight="800" prefWidth="1020" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="NewerLoginPage" fx:controller="controller.NewerLoginPageController" maxHeight="1080.0" maxWidth="1920.0" minHeight="400" minWidth="500" prefHeight="800" prefWidth="1020" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <TextField layoutX="324.0" layoutY="557.0" prefHeight="65.0" prefWidth="373.0" promptText="Password" />
+      <TextField fx:id="password" layoutX="324.0" layoutY="557.0" prefHeight="65.0" prefWidth="373.0" promptText="Password" />
       <Label fx:id="NewerLogin" layoutX="373.0" layoutY="181.0" style="-fx-background-color: red;" text="Login" textFill="WHITE">
          <font>
             <Font name="Stencil" size="96.0" />
          </font>
       </Label>
-      <Button fx:id="Logout" layoutX="785.0" layoutY="14.0" prefHeight="68.0" prefWidth="221.0" text="EXIT--&gt;" textFill="WHITE">
+      <Button fx:id="exit" onMouseClicked="#exit" layoutX="785.0" layoutY="14.0" prefHeight="68.0" prefWidth="221.0" text="EXIT--&gt;" textFill="WHITE">
          <effect>
             <DropShadow height="255.0" radius="127.0" spread="0.5" width="255.0" />
          </effect>
@@ -23,7 +23,7 @@
             <Font name="Stencil" size="36.0" />
          </font>
       </Button>
-      <Button id="NewerLogin" layoutX="435.0" layoutY="700.0" mnemonicParsing="false" text="Login">
+      <Button id="NewerLogin" onMouseClicked="#loginUser" layoutX="435.0" layoutY="700.0" mnemonicParsing="false" text="Login">
          <font>
             <Font name="Stencil" size="36.0" />
          </font>
@@ -31,6 +31,6 @@
             <DropShadow height="255.0" radius="127.0" spread="0.5" width="255.0" />
          </effect>
       </Button>
-      <TextField layoutX="324.0" layoutY="448.0" prefHeight="65.0" prefWidth="373.0" promptText="Username" />
+      <TextField fx:id="username" layoutX="324.0" layoutY="448.0" prefHeight="65.0" prefWidth="373.0" promptText="Username" />
    </children>
 </AnchorPane>

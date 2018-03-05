@@ -12,6 +12,7 @@
          <font>
             <Font name="Stencil" size="72.0" />
          </font></Label>
+        <TextField fx:id="fName" layoutX="343.0" layoutY="174.0" promptText="First Name" />
         <TextField fx:id="uName" layoutX="343.0" layoutY="267.0" promptText="Username" />
         <TextField fx:id="pWord" layoutX="343.0" layoutY="366.0" promptText="Password" />
         <TextField fx:id="weight" layoutX="343.0" layoutY="458.0" promptText="Enter Weight" />
@@ -21,6 +22,6 @@
          <font>
             <Font name="Stencil" size="36.0" />
          </font></Button>
-      <TextField fx:id="uName1" layoutX="343.0" layoutY="174.0" promptText="First Name" />
+
     </children>
 </AnchorPane>
