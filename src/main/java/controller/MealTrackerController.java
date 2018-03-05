@@ -7,13 +7,17 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import model.Meal;
+import model.User;
 import model.UserData;
+
+import java.io.IOException;
 
 import static controller.StrikethroughMainController.userD;
 
 public class MealTrackerController {
 
-    private UserData userD;
+    private StrikethroughMainController controller = new StrikethroughMainController();
+    private User userLoggedIn = controller.getUserLoggedIn();
 
     private String mealName, calories, totalFat, satFat, unsatFat, sodium, carbs, sugar, protein, cholest, numServing, date;
 
@@ -26,12 +30,20 @@ public class MealTrackerController {
     @FXML
     private Label label;
 
+    public MealTrackerController() throws IOException {
+    }
+
     @FXML
     public void initialize() {
         Platform.runLater( () -> label.requestFocus() );
     }
 
     public void mealTracker(MouseEvent e)
+    {
+        date = day.getText();
+    }
+
+    public void mealInfo(MouseEvent e)
     {
         mealName = mName.getText();
         calories = kalories.getText();
@@ -44,12 +56,11 @@ public class MealTrackerController {
         protein = brotein.getText();
         cholest = cholset.getText();
         numServing = nServing.getText();
-//        date = day.getText();
 
         Meal meal = new Meal(mealName, Integer.parseInt(calories), Integer.parseInt(totalFat), Integer.parseInt(satFat), Integer.parseInt(unsatFat),
-                Integer.parseInt(sodium), Integer.parseInt(carbs), Integer.parseInt(sugar), Integer.parseInt(cholest), Integer.parseInt(protein), Integer.parseInt(numServing), "4/20/1969");
+                Integer.parseInt(sodium), Integer.parseInt(carbs), Integer.parseInt(sugar), Integer.parseInt(cholest), Integer.parseInt(protein), Integer.parseInt(numServing), date);
 
-//        userD.setMeals("4/20/1969", meal);
+        userLoggedIn.setMeals(date, meal);
         System.out.println("click");
     }
 }
