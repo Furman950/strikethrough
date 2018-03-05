@@ -16,8 +16,6 @@ import java.io.*;
 
 public class RegisterUserController {
     private StrikethroughMainController strikethrough = new StrikethroughMainController();
-    private UserData userD = strikethrough.getUserD();
-    private User userLoggedIn;
 
     @FXML
     private TextField uName, pWord, fName, weight, goalWeight, birthday;
@@ -56,14 +54,15 @@ public class RegisterUserController {
             uGoalWeight = Integer.parseInt(goalWeight.getText());
             uBirthday = new Birthday(birthday.getText());
 
-            for (User u : this.userD.getUsers()) {
+            for (User u : strikethrough.getUserD().getUsers()) {
                 if (u.getUsername().equalsIgnoreCase(username)) {
                     throw new UserAlreadyExistsException("Username already exists.");
                 }
             }
 
             User user = new User(username, password, firstName);
-            userD.setUsers(user);
+            strikethrough.getUserD().setUsers(user);
+            strikethrough.saveData();
             login();
             System.out.println("Successfully created a new user");
         }
@@ -92,12 +91,13 @@ public class RegisterUserController {
         username = uName.getText();
         password = pWord.getText();
 
-        for (User u : this.userD.getUsers()) {
+        for (User u : strikethrough.getUserD().getUsers()) {
             if (u.getUsername().equalsIgnoreCase(username)) {
                 if (u.getPassword().equals(password)) {
                     strikethrough.setUserLoggedIn(u);
                     MainMenu = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/MainMenu.fxml"));
                     RegisterUser.getChildren().setAll(MainMenu);
+
                 }
             }
         }

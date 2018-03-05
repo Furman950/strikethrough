@@ -7,19 +7,19 @@ import java.io.*;
 
 public class StrikethroughMainController {
     public static UserData userD = new UserData();
-    public static User userLoggedIn;
+    public static User userLoggedIn = new User();
     private String fileName = "UserData.rac";
 
     public StrikethroughMainController() throws IOException {
         loadData();
-        System.out.println("Loaded data");
-        if (userD == null) {
-            userD.setUsers(new User("Admin", "Admin", "Admin"));
-        }
     }
 
     public UserData getUserD() {
         return userD;
+    }
+
+    public void setUserD(UserData userD) {
+        this.userD = userD;
     }
 
     public User getUserLoggedIn() {
@@ -39,6 +39,7 @@ public class StrikethroughMainController {
         try(ObjectInputStream in = new ObjectInputStream(new FileInputStream(fileName))){
             try {
                 this.userD = (UserData) in.readObject();
+                System.out.println("Loaded data");
             }
             catch (ClassNotFoundException e) {
                 e.printStackTrace();
@@ -55,11 +56,12 @@ public class StrikethroughMainController {
     public void saveData() throws IOException {
         try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(fileName))) {
             out.writeObject(this.userD);
+            System.out.println("Saved data");
         }
     }
 
-    public void exit()
-    {
+    public void exit() throws IOException {
+        saveData();
         System.exit(0);
     }
 }
