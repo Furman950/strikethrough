@@ -6,25 +6,25 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="mealInfo" maxHeight="800" maxWidth="1000" minHeight="400" minWidth="500" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
+<AnchorPane fx:id="mealInfo" maxHeight="800" maxWidth="1000" minHeight="400" minWidth="500" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MealTrackerController">
    <children>
-      <TextField layoutX="14.0" layoutY="149.0" prefHeight="65.0" prefWidth="276.0" promptText="Meal Name" />
-      <TextField layoutX="14.0" layoutY="257.0" prefHeight="65.0" prefWidth="276.0" promptText="Total Fat" />
-      <TextField layoutX="14.0" layoutY="368.0" prefHeight="65.0" prefWidth="276.0" promptText="Sodium" />
-      <TextField layoutX="362.0" layoutY="148.0" prefHeight="65.0" prefWidth="276.0" promptText="# of Servings" />
-      <TextField layoutX="362.0" layoutY="256.0" prefHeight="65.0" prefWidth="276.0" promptText="Saturated Fat" />
-      <TextField layoutX="362.0" layoutY="367.0" prefHeight="65.0" prefWidth="276.0" promptText="Carbohydrates" />
-      <TextField layoutX="710.0" layoutY="149.0" prefHeight="65.0" prefWidth="276.0" promptText="Calories" />
-      <TextField layoutX="710.0" layoutY="257.0" prefHeight="65.0" prefWidth="276.0" promptText="Unsaturated Fat" />
-      <TextField layoutX="710.0" layoutY="368.0" prefHeight="65.0" prefWidth="276.0" promptText="Sugar" />
-      <TextField layoutX="152.0" layoutY="497.0" prefHeight="65.0" prefWidth="276.0" promptText="Protein" />
-      <TextField layoutX="572.0" layoutY="497.0" prefHeight="65.0" prefWidth="276.0" promptText="Cholesterol" />
-      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="420.0" layoutY="606.0" mnemonicParsing="false" text="Submit" textAlignment="CENTER" textFill="WHITE">
+      <TextField fx:id="mName" layoutX="14.0" layoutY="149.0" prefHeight="65.0" prefWidth="276.0" promptText="Meal Name" />
+      <TextField fx:id="tFat" layoutX="14.0" layoutY="257.0" prefHeight="65.0" prefWidth="276.0" promptText="Total Fat" />
+      <TextField fx:id="NaCl" layoutX="14.0" layoutY="368.0" prefHeight="65.0" prefWidth="276.0" promptText="Sodium" />
+      <TextField fx:id="nServing" layoutX="362.0" layoutY="148.0" prefHeight="65.0" prefWidth="276.0" promptText="# of Servings" />
+      <TextField fx:id="sFat" layoutX="362.0" layoutY="256.0" prefHeight="65.0" prefWidth="276.0" promptText="Saturated Fat" />
+      <TextField fx:id="karbs" layoutX="362.0" layoutY="367.0" prefHeight="65.0" prefWidth="276.0" promptText="Carbohydrates" />
+      <TextField fx:id="kalories" layoutX="710.0" layoutY="149.0" prefHeight="65.0" prefWidth="276.0" promptText="Calories" />
+      <TextField fx:id="usFat" layoutX="710.0" layoutY="257.0" prefHeight="65.0" prefWidth="276.0" promptText="Unsaturated Fat" />
+      <TextField fx:id="shugar" layoutX="710.0" layoutY="368.0" prefHeight="65.0" prefWidth="276.0" promptText="Sugar" />
+      <TextField fx:id="brotein" layoutX="152.0" layoutY="497.0" prefHeight="65.0" prefWidth="276.0" promptText="Protein" />
+      <TextField fx:id="cholset" layoutX="572.0" layoutY="497.0" prefHeight="65.0" prefWidth="276.0" promptText="Cholesterol" />
+      <Button fx:id="submit" alignment="CENTER" contentDisplay="CENTER" layoutX="420.0" layoutY="606.0" mnemonicParsing="false" onMouseClicked="#mealTracker" text="Submit" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font size="36.0" />
          </font>
       </Button>
-      <Label layoutX="238.0" layoutY="40.0" text="Meal Tracker" textAlignment="CENTER" textFill="WHITE">
+      <Label fx:id="label" layoutX="238.0" layoutY="40.0" text="Meal Tracker" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Stencil" size="72.0" />
          </font>

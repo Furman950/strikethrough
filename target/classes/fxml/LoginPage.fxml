@@ -4,14 +4,6 @@
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<<<<<<< HEAD
-<AnchorPane fx:controller="controller.LoginPageController" maxHeight="800" maxWidth="1000" minHeight="400" minWidth="500" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
-
-   <children>
-      <Button fx:id="Login" layoutX="400" layoutY="350" prefHeight="100" prefWidth="200" text="Login" />
-      <Button fx:id="Register" layoutX="400" layoutY="500" prefHeight="100" prefWidth="200" text="Register" />
-      <Button fx:id="Logout" layoutX="844.0" layoutY="5" prefHeight="65.0" prefWidth="155.0" text="Logout" />
-=======
 <AnchorPane fx:id="LoginPage" maxHeight="800" maxWidth="1020" minHeight="400" minWidth="500" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
 
    <children>
@@ -28,6 +20,5 @@
             <DropShadow height="255.0" radius="127.0" spread="0.5" width="255.0" />
          </effect>
       </Button>
->>>>>>> BBC
    </children>
 </AnchorPane>

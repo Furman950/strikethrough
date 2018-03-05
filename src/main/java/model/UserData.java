@@ -1,17 +1,14 @@
 package model;
 
 import java.io.Serializable;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class UserData implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-	private List<Workout> workouts;
-	private Map<String, Meal> meals;
+	private List<Workout> workouts = new ArrayList<>();
+	private Map<String, Meal> meals = new HashMap<String, Meal>();
 	private List<User> users;
 	private Map<String, WeightTracker> weights;
 	

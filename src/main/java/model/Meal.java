@@ -13,6 +13,7 @@ public class Meal implements Comparable<Meal>
 	private int unsatFat;
 	private int cholest;
 	private int numServing;
+	private String date;
 	
 	public Meal() {}
 	
@@ -30,7 +31,7 @@ public class Meal implements Comparable<Meal>
 	 * @param numServing
 	 */
 	public Meal(String foodName, int calories, int totalFat, int satFat, int unsatFat, int sodium, int carbs, int sugar, int cholest, int protein,
-				 int numServing)
+				 int numServing, String date)
 	{
 		this.setFoodName(foodName);
 		this.setCalories(calories);
@@ -43,6 +44,7 @@ public class Meal implements Comparable<Meal>
 		this.setUnsatFat(unsatFat);
 		this.setCholest(cholest);
 		this.setNumServing(numServing);
+		this.setDate(date);
 	}
 	
 	/**
@@ -202,5 +204,12 @@ public class Meal implements Comparable<Meal>
 	{
 		return this.getFoodName().compareTo(m.getFoodName());
 	}
-	
+
+	public String getDate() {
+		return date;
+	}
+
+	public void setDate(String date) {
+		this.date = date;
+	}
 }
