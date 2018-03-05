@@ -1,8 +1,10 @@
 package controller;
 
+import exceptions.InvalidBirthdayException;
 import exceptions.UserAlreadyExistsException;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
@@ -28,7 +30,10 @@ public class RegisterUserController {
 
     public RegisterUserController() throws IOException {}
 
-    private String username, password, firstName, uWeight, uGoalWeight, uBirthday;
+    private String username, password, firstName;
+    private int uWeight, uGoalWeight;
+    Birthday uBirthday;
+    Alert alert = new Alert(Alert.AlertType.WARNING);
 
 
     /**
@@ -36,24 +41,43 @@ public class RegisterUserController {
      */
 
     public void register(MouseEvent e) {
-        System.out.println("In register method");
-        username = uName.getText();
-        password = pWord.getText();
-        firstName = fName.getText();
-        uWeight = weight.getText();
-        uGoalWeight = goalWeight.getText();
-        uBirthday = birthday.getText();
+        alert.setTitle("Invalid Input");
+        try {
+            System.out.println("In register method");
+            username = uName.getText();
+            password = pWord.getText();
+            firstName = fName.getText();
+            uWeight = Integer.parseInt(weight.getText());
+            uGoalWeight = Integer.parseInt(goalWeight.getText());
+            uBirthday = new Birthday(birthday.getText());
 
-        for (User u : this.userD.getUsers()) {
-            if (u.getUsername().equalsIgnoreCase(username)) {
-                throw new UserAlreadyExistsException("Username already exists.");
+            for (User u : this.userD.getUsers()) {
+                if (u.getUsername().equalsIgnoreCase(username)) {
+                    throw new UserAlreadyExistsException("Username already exists.");
+                }
             }
+
+            User user = new User(username, password, firstName);
+            userD.setUsers(user);
+            login();
+            System.out.println("Successfully created a new user");
         }
 
-        User user = new User(username, password, firstName);
-        userD.setUsers(user);
-        login();
-        System.out.println("Successfully created a new user");
+        catch(NumberFormatException numberException) {
+            alert.setContentText("Invalid weight or goal weight! Enter numbers only!!");
+            alert.show();
+        }
+        catch(InvalidBirthdayException e1) {
+            alert.setContentText("Invalid birthday format!! Enter correct format! mm/dd/yyyy");
+            alert.show();
+        }
+
+        catch(UserAlreadyExistsException e2) {
+            alert.setContentText("Username already exists!! Try again!");
+            uName.setText("");
+            alert.show();
+        }
+
     }
 
     /**
@@ -69,12 +93,6 @@ public class RegisterUserController {
                     strikethrough.setUserLoggedIn(u);
                 }
             }
-        }
-    }
-
-    public void printUserData(MouseEvent mouseEvent) {
-        if (userD != null) {
-            System.out.println(userD.toString());
         }
     }
 }
