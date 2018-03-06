@@ -39,6 +39,10 @@ public class WeightTrackerController {
         Platform.runLater(() -> label.requestFocus());
     }
 
+    /**
+     *
+     * @throws IOException
+     */
     public WeightTrackerController() throws IOException {
     }
 
@@ -71,6 +75,10 @@ public class WeightTrackerController {
 
     }
 
+    /**
+     *
+     * @param mouseEvent
+     */
     public void searchForWeight(MouseEvent mouseEvent) {
         invalidDate = false;
         checkDate();
@@ -97,6 +105,9 @@ public class WeightTrackerController {
 
     }
 
+    /**
+     *
+     */
     private void checkDate() {
         String[] date = data.getText().split("/");
 
@@ -135,6 +146,11 @@ public class WeightTrackerController {
         }
     }
 
+    /**
+     * 
+     * @param mouseEvent
+     * @throws IOException
+     */
     public void goBack(MouseEvent mouseEvent) throws IOException {
         MainMenu = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/MainMenu.fxml"));
         WeightTracker.getChildren().setAll(MainMenu);

@@ -11,6 +11,11 @@ public class SubWorkoutController {
     @FXML
     AnchorPane WorkoutGenerator, workout, CustomWorkout;
 
+    /**
+     *
+     * @param mouseEvent
+     * @throws IOException
+     */
     public void goBack(MouseEvent mouseEvent) throws IOException {
         workout = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Workout.fxml"));
 

@@ -5,15 +5,24 @@ import model.UserData;
 
 import java.io.*;
 
+
 public class StrikethroughMainController {
     public static UserData userD = new UserData();
     public static User userLoggedIn = new User();
     private String fileName = "UserData.rac";
 
+    /**
+     * loads data
+     * @throws IOException
+     */
     public StrikethroughMainController() throws IOException {
         loadData();
     }
 
+    /**
+     *
+     * @return r
+     */
     public UserData getUserD() {
         return userD;
     }
@@ -60,6 +69,10 @@ public class StrikethroughMainController {
         }
     }
 
+    /**
+     * Saves  the data
+     * @throws IOException
+     */
     public void exit() throws IOException {
         saveData();
         System.exit(0);

@@ -44,7 +44,10 @@ public class RegisterUserController {
 
 
     /**
+     *
      * Creates a new user profile
+     * @param e
+     * @throws IOException
      */
 
     public void register(MouseEvent e) throws IOException {
@@ -89,7 +92,10 @@ public class RegisterUserController {
     }
 
     /**
+     *
      * logs in an existing profile
+     *
+     * @throws IOException
      */
     public void login() throws IOException {
         username = uName.getText();
@@ -107,6 +113,11 @@ public class RegisterUserController {
         }
     }
 
+    /**
+     *
+     * @param mouseEvent
+     * @throws IOException
+     */
     public void goBack(MouseEvent mouseEvent) throws IOException {
         loginPage = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/LoginPage.fxml"));
         RegisterUser.getChildren().setAll(loginPage);

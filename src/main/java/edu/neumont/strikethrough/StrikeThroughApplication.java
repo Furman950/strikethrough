@@ -9,7 +9,10 @@ import javafx.stage.Stage;
 
 public class StrikeThroughApplication extends Application
 {
-
+    /**
+     * Starts the fxml
+     * @param args
+     */
 	public static void main(String[] args) 
 	{
 		Application.launch(StrikeThroughApplication.class, args);
