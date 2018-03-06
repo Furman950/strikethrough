@@ -22,6 +22,7 @@ public class MainMenuController {
 
     public void logout(MouseEvent mouseEvent) throws IOException {
         strikethrough.setUserLoggedIn(null);
+        strikethrough.saveData();
         LoginPage = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/LoginPage.fxml"));
         MainMenu.getChildren().setAll(LoginPage);
         System.out.println("-----------------------------" + strikethrough.getUserLoggedIn());

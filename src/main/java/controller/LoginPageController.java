@@ -15,6 +15,7 @@ public class LoginPageController {
     private AnchorPane RegisterUser, NewerLoginPage;
 
     public LoginPageController() throws IOException {
+        strikethrough.loadData();
     }
 
     @FXML

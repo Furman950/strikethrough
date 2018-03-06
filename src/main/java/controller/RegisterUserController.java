@@ -97,7 +97,6 @@ public class RegisterUserController {
                     strikethrough.setUserLoggedIn(u);
                     MainMenu = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/MainMenu.fxml"));
                     RegisterUser.getChildren().setAll(MainMenu);
-
                 }
             }
         }
@@ -106,6 +105,5 @@ public class RegisterUserController {
     public void goBack(MouseEvent mouseEvent) throws IOException {
         loginPage = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/LoginPage.fxml"));
         RegisterUser.getChildren().setAll(loginPage);
-
     }
 }

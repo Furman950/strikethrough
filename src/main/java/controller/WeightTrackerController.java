@@ -55,7 +55,10 @@ public class WeightTrackerController {
             cal.set(Calendar.getInstance().get(Calendar.YEAR), Calendar.getInstance().get(Calendar.MONTH), Calendar.getInstance().get(Calendar.DAY_OF_MONTH));
             weight = Integer.parseInt(data.getText().trim());
             WeightTracker tracker = new WeightTracker(weight);
+            System.out.println(strikethrough.getUserLoggedIn().getWeights().toString());
             strikethrough.getUserLoggedIn().setWeights(cal, tracker);
+            System.out.println("-------------------------------------------------------");
+            System.out.println(strikethrough.getUserLoggedIn().getWeights().toString());
             Alert alert1 = new Alert(Alert.AlertType.CONFIRMATION);
             alert1.setTitle("Successful");
             alert1.setContentText("Added weight to today's date successfully!!!");

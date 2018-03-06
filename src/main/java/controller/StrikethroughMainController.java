@@ -10,9 +10,7 @@ public class StrikethroughMainController {
     public static User userLoggedIn = new User();
     private String fileName = "UserData.rac";
 
-    public StrikethroughMainController() throws IOException {
-        loadData();
-    }
+    public StrikethroughMainController() throws IOException {}
 
     public UserData getUserD() {
         return userD;
