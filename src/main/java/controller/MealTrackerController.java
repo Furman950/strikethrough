@@ -40,11 +40,19 @@ public class MealTrackerController {
         Platform.runLater( () -> label.requestFocus() );
     }
 
+    /**
+     *
+     * @param e
+     */
     public void mealTracker(MouseEvent e)
     {
         date = day.getText();
     }
 
+    /**
+     *
+     * @param e
+     */
     public void mealInfo(MouseEvent e)
     {
         mealName = mName.getText();
@@ -66,6 +74,11 @@ public class MealTrackerController {
         System.out.println("click");
     }
 
+    /**
+     *
+     * @param mouseEvent
+     * @throws IOException
+     */
     public void goBack(MouseEvent mouseEvent) throws IOException {
         mainMenu = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/MainMenu.fxml"));
         meal.getChildren().setAll(mainMenu);
