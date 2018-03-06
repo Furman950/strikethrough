@@ -24,9 +24,6 @@
          <font>
             <Font size="36.0" />
          </font>
-         <effect>
-            <DropShadow height="255.0" radius="127.0" spread="0.5" width="255.0" />
-         </effect>
       </Button>
       <Label fx:id="label" layoutX="238.0" layoutY="40.0" text="Meal Tracker" textAlignment="CENTER" textFill="WHITE">
          <font>

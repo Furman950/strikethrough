@@ -9,25 +9,16 @@
 
    <children>
       <Button fx:id="Login" onMouseClicked="#login" layoutX="385.0" layoutY="426.0" prefHeight="100" prefWidth="251.0" text="Login" textFill="WHITE">
-         <!--<effect>
-            <DropShadow height="255.0" radius="127.0" spread="0.5" width="255.0" />
-         </effect>-->
          <font>
             <Font name="Stencil" size="36.0" />
          </font>
       </Button>
       <Button fx:id="Register" layoutX="385.0" layoutY="615.0" onMouseClicked="#register" prefHeight="100" prefWidth="251.0" text="Register" textFill="WHITE">
-         <!--<effect>
-            <DropShadow height="255.0" radius="127.0" spread="0.5" width="255.0" />
-         </effect>-->
          <font>
             <Font name="Stencil" size="36.0" />
          </font>
       </Button>
       <Button fx:id="exit" onMouseClicked="#exit" layoutX="785.0" layoutY="14.0" prefHeight="68.0" prefWidth="221.0" text="EXIT--&gt;" textFill="WHITE">
-         <effect>
-            <DropShadow height="255.0" radius="127.0" spread="0.5" width="255.0" />
-         </effect>
          <font>
             <Font name="Stencil" size="36.0" />
          </font>

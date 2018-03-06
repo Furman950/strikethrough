@@ -12,28 +12,12 @@
     <children>
         
         <Button fx:id="Register" layoutX="331.0" layoutY="518.0" prefHeight="100" prefWidth="358.0" text="Register" textFill="WHITE">
-            <effect>
-                <DropShadow height="255.0" radius="127.0" spread="0.5" width="255.0" />
-            </effect>
         </Button>
         <Button fx:id="Logout" layoutX="865.0" layoutY="14.0" prefHeight="65.0" prefWidth="141.0" text="Logout" textFill="WHITE">
-            <effect>
-                <DropShadow height="255.0" radius="127.0" spread="0.5" width="255.0" />
-            </effect>
         </Button>
       <ComboBox layoutX="285.0" layoutY="201.0" prefHeight="65.0" prefWidth="451.0" promptText="Choose Muscle Group">
-         <effect>
-            <Lighting diffuseConstant="1.51" specularConstant="0.0" specularExponent="14.29" surfaceScale="4.64">
-               <bumpInput>
-                  <Shadow />
-               </bumpInput>
-            </Lighting>
-         </effect>
       </ComboBox>
       <Button fx:id="backWorkoutGen" onMousePressed="#goBack" layoutX="14.0" layoutY="14.0" prefHeight="65.0" prefWidth="141.0" text="back" textFill="WHITE">
-         <effect>
-            <DropShadow height="255.0" radius="127.0" spread="0.5" width="255.0" />
-         </effect>
       </Button>
     </children>
 </AnchorPane>

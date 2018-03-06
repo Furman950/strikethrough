@@ -14,31 +14,38 @@
 }
 
 #LoginPage {
-    -fx-background-image:url('BestBape.png') ;
+    -fx-background-image: url('BestBape.png');
 }
 
 #MainMenu {
-    -fx-background-image:url('BestestBape.png') ;
+    -fx-background-image: url('BestestBape.png');
 }
-#DiaMainMenu{
+
+#DiaMainMenu {
 
     -fx-background-color: red;
 }
-.button{
+
+.button {
     -fx-background-color: red;
 }
-#mealInfo{
-    -fx-background-image:url("BestestBape.png") ;
+
+#mealInfo {
+    -fx-background-image: url("BestestBape.png");
 }
-#meal{
-    -fx-background-image:url("BestestBape.png") ;
+
+#meal {
+    -fx-background-image: url("BestestBape.png");
 }
-#label{
+
+#label {
     -fx-background-color: red;
 }
-#RegisterUser{
-    -fx-background-image:url("BestestBape.png") ;
+
+#RegisterUser {
+    -fx-background-image: url("BestestBape.png");
 }
-#NewerLoginPage{
-    -fx-background-image:url("BestestBape.png") ;
-}#NewerLoginPage
+
+#NewerLoginPage {
+    -fx-background-image: url("BestestBape.png");
+}

@@ -7,31 +7,30 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="workout" fx:controller="controller.WorkoutController" maxHeight="800" maxWidth="1000" minHeight="400" minWidth="500" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <Button fx:id="back" onMousePressed="#goBack" layoutX="14.0" layoutY="14.0" prefHeight="65.0" prefWidth="141.0" text="back" textFill="WHITE">
-         <effect>
-            <DropShadow height="255.0" radius="127.0" spread="0.5" width="255.0" />
-         </effect>
-      </Button>
-      <Button fx:id="customWorkout" onMousePressed="#custom" layoutX="551.0" layoutY="326.0" mnemonicParsing="false" prefHeight="108.0" prefWidth="403.0" text="Custom Workout">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-         <effect>
-            <DropShadow height="255.0" radius="127.0" spread="0.5" width="255.0" />
-         </effect></Button>
-      <Button fx:id="generatedWorkout" onMousePressed="#generate" layoutX="40.0" layoutY="326.0" mnemonicParsing="false" prefHeight="108.0" prefWidth="403.0" text="Generated Workout">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-         <effect>
-            <DropShadow height="255.0" radius="127.0" spread="0.5" width="255.0" />
-         </effect></Button>
-      <Label fx:id="label" alignment="CENTER" contentDisplay="CENTER" layoutX="159.0" layoutY="97.0" text="Workout Planner" textAlignment="CENTER" textFill="WHITE">
-         <font>
-            <Font name="Stencil" size="72.0" />
-         </font>
-      </Label>
-   </children>
+<AnchorPane fx:id="workout" fx:controller="controller.WorkoutController" maxHeight="800" maxWidth="1000" minHeight="400"
+            minWidth="500" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.121"
+            xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Button fx:id="back" onMousePressed="#goBack" layoutX="14.0" layoutY="14.0" prefHeight="65.0" prefWidth="141.0"
+                text="back" textFill="WHITE">
+        </Button>
+        <Button fx:id="customWorkout" onMousePressed="#custom" layoutX="551.0" layoutY="326.0" mnemonicParsing="false"
+                prefHeight="108.0" prefWidth="403.0" text="Custom Workout">
+            <cursor>
+                <Cursor fx:constant="HAND"/>
+            </cursor>
+        </Button>
+        <Button fx:id="generatedWorkout" onMousePressed="#generate" layoutX="40.0" layoutY="326.0"
+                mnemonicParsing="false" prefHeight="108.0" prefWidth="403.0" text="Generated Workout">
+            <cursor>
+                <Cursor fx:constant="HAND"/>
+            </cursor>
+        </Button>
+        <Label fx:id="label" alignment="CENTER" contentDisplay="CENTER" layoutX="159.0" layoutY="97.0"
+               text="Workout Planner" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font name="Stencil" size="72.0"/>
+            </font>
+        </Label>
+    </children>
 </AnchorPane>
