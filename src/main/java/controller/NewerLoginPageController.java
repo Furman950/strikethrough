@@ -34,11 +34,19 @@ public class NewerLoginPageController {
         Platform.runLater( () -> NewerLogin.requestFocus() );
     }
 
-
+    /**
+     *
+     *
+     * @throws IOException
+     */
     public NewerLoginPageController() throws IOException {
     }
 
-
+    /**
+     *
+     * @param mouseEvent
+     * @throws IOException
+     */
     public void loginUser(MouseEvent mouseEvent) throws IOException {
         for (User u : strikethrough.getUserD().getUsers()) {
             if (username.getText().equals(u.getUsername())) {
@@ -59,10 +67,20 @@ public class NewerLoginPageController {
         alert.show();
     }
 
+    /**
+     *
+     * @param mouseEvent
+     * @throws IOException
+     */
     public void exit(MouseEvent mouseEvent) throws IOException {
         strikethrough.exit();
     }
 
+    /**
+     * 
+     * @param mouseEvent
+     * @throws IOException
+     */
     public void goBack(MouseEvent mouseEvent) throws IOException {
         loginPage = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/LoginPage.fxml"));
         NewerLoginPage.getChildren().setAll(loginPage);
