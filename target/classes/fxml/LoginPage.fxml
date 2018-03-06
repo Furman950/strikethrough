@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="LoginPage" prefHeight="800" prefWidth="1020" minHeight="400" minWidth="500" maxHeight="1080.0" maxWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginPageController">
+<AnchorPane fx:id="LoginPage" maxHeight="1080.0" maxWidth="1920.0" minHeight="400" minWidth="500" prefHeight="800" prefWidth="1020" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginPageController">
 
    <children>
-      <Button fx:id="Login" onMouseClicked="#login" layoutX="385.0" layoutY="426.0" prefHeight="100" prefWidth="251.0" text="Login" textFill="WHITE">
+      <Button fx:id="Login" layoutX="385.0" layoutY="426.0" onMouseClicked="#login" prefHeight="100" prefWidth="251.0" text="Login" textFill="WHITE">
          <font>
             <Font name="Stencil" size="36.0" />
          </font>
@@ -18,7 +17,7 @@
             <Font name="Stencil" size="36.0" />
          </font>
       </Button>
-      <Button fx:id="exit" onMouseClicked="#exit" layoutX="785.0" layoutY="14.0" prefHeight="68.0" prefWidth="221.0" text="EXIT--&gt;" textFill="WHITE">
+      <Button fx:id="exit" layoutX="785.0" layoutY="14.0" onMouseClicked="#exit" prefHeight="68.0" prefWidth="221.0" text="EXIT--&gt;" textFill="WHITE">
          <font>
             <Font name="Stencil" size="36.0" />
          </font>

@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -18,7 +19,10 @@ public class RegisterUserController {
     private StrikethroughMainController strikethrough = new StrikethroughMainController();
 
     @FXML
-    private TextField uName, pWord, fName, weight, goalWeight, birthday;
+    private TextField uName, fName, weight, goalWeight, birthday;
+
+    @FXML
+    private PasswordField pWord;
 
     @FXML
     private AnchorPane RegisterUser, MainMenu, loginPage;
