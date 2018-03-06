@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -16,7 +17,10 @@ public class NewerLoginPageController {
     StrikethroughMainController strikethrough = new StrikethroughMainController();
 
     @FXML
-    private TextField username, password;
+    private TextField username;
+
+    @FXML
+    private PasswordField Password;
 
     @FXML
     private AnchorPane NewerLoginPage, MainMenu, loginPage;
@@ -39,7 +43,7 @@ public class NewerLoginPageController {
         for (User u : strikethrough.getUserD().getUsers()) {
             if (username.getText().equals(u.getUsername())) {
                 System.out.println("Inside user name check");
-                if (password.getText().equals(u.getPassword())) {
+                if (Password.getText().equals(u.getPassword())) {
                     System.out.println("Inside user password check");
                     strikethrough.setUserLoggedIn(u);
                     MainMenu = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/MainMenu.fxml"));
