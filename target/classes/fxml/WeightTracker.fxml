@@ -8,12 +8,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="WeightTracker" maxHeight="800" maxWidth="1000" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.WeightTrackerController">
-    <TextField fx:id="day" alignment="CENTER" layoutX="258.0" layoutY="347.0" prefHeight="99.0" prefWidth="494.0" promptText="Enter a Date">
+<AnchorPane fx:id="WeightTracker" fx:controller="controller.WeightTrackerController" maxHeight="800" maxWidth="1000" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+    <TextField fx:id="data" alignment="CENTER" layoutX="258.0" layoutY="347.0" prefHeight="99.0" prefWidth="494.0" promptText="Date/Weight">
         <font>
             <Font size="60.0" />
         </font></TextField>
-    <Button fx:id="Submit" alignment="CENTER" contentDisplay="CENTER" layoutX="166.0" layoutY="628.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="185.0" text="Add" textAlignment="CENTER" textFill="WHITE">
+    <Button fx:id="Submit" alignment="CENTER" contentDisplay="CENTER" layoutX="166.0" layoutY="628.0" mnemonicParsing="false" onMouseClicked="#addWeight" prefHeight="68.0" prefWidth="185.0" text="Add" textAlignment="CENTER" textFill="WHITE">
         <effect>
             <DropShadow height="255.0" radius="127.0" spread="0.5" width="255.0" />
         </effect>
@@ -29,7 +29,7 @@
             <Font name="Stencil" size="72.0" />
         </font>
     </Label>
-    <Button fx:id="Submit1" alignment="CENTER" contentDisplay="CENTER" layoutX="660.0" layoutY="628.0" mnemonicParsing="false" text="Search" textAlignment="CENTER" textFill="WHITE">
+    <Button fx:id="Submit1" alignment="CENTER" contentDisplay="CENTER" layoutX="660.0" layoutY="628.0" mnemonicParsing="false" onMouseClicked="#searchForWeight" text="Search" textAlignment="CENTER" textFill="WHITE">
         <effect>
             <DropShadow height="255.0" radius="127.0" spread="0.5" width="255.0" />
         </effect>
@@ -40,4 +40,15 @@
             <Cursor fx:constant="HAND" />
         </cursor>
     </Button>
+   <Button fx:id="back" onMousePressed="#goBack" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#addWeight" prefHeight="68.0" prefWidth="185.0" text="Back" textAlignment="CENTER" textFill="WHITE">
+      <effect>
+         <DropShadow height="255.0" radius="127.0" spread="0.5" width="255.0" />
+      </effect>
+      <font>
+         <Font name="Stencil" size="36.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+   </Button>
 </AnchorPane>

@@ -7,7 +7,7 @@
 <?import javafx.scene.effect.Shadow?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="WorkoutGenerator" maxHeight="800" maxWidth="1020" minHeight="400" minWidth="500" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="WorkoutGenerator" fx:controller="controller.SubWorkoutController" maxHeight="800" maxWidth="1020" minHeight="400" minWidth="500" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
 
     <children>
         
@@ -30,5 +30,10 @@
             </Lighting>
          </effect>
       </ComboBox>
+      <Button fx:id="backWorkoutGen" onMousePressed="#goBack" layoutX="14.0" layoutY="14.0" prefHeight="65.0" prefWidth="141.0" text="back" textFill="WHITE">
+         <effect>
+            <DropShadow height="255.0" radius="127.0" spread="0.5" width="255.0" />
+         </effect>
+      </Button>
     </children>
 </AnchorPane>

@@ -1,10 +1,7 @@
 package model;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class User implements Serializable{
 
@@ -12,7 +9,7 @@ public class User implements Serializable{
 
 	private List<Workout> workouts = new ArrayList<>();
 	private Map<String, Meal> meals = new HashMap<>();
-	private Map<String, WeightTracker> weights = new HashMap<>();
+	private Map<Calendar, WeightTracker> weights = new HashMap<>();
 	
 	private String username;
 	private String password;
@@ -29,6 +26,15 @@ public class User implements Serializable{
 		this.setUsername(username);
 		this.setPassword(password);
 		this.setFirstName(firstName);
+	}
+
+	public User(String username, String password, String firstName, int uWeight, int uGoalWeight, Birthday uBirthday) {
+        this.setUsername(username);
+        this.setPassword(password);
+        this.setFirstName(firstName);
+        this.setWeight(uWeight);
+        this.setGoalWeight(uGoalWeight);
+        this.setBirthday(uBirthday);
 	}
 
 	/**
@@ -56,14 +62,14 @@ public class User implements Serializable{
 		this.meals.put(date,meal);
 	}
 
-	public Map<String, WeightTracker> getWeights() {
+	public Map<Calendar, WeightTracker> getWeights() {
 		return weights;
 	}
 	/**
 	 * @param weight the weights to set
 	 */
-	public void setWeights(String date, WeightTracker weight) {
-		this.weights.put(date, weight);
+	public void setWeights(Calendar cal, WeightTracker weight) {
+	    weights.put(cal, weight);
 	}
 	
 	/**
@@ -76,6 +82,9 @@ public class User implements Serializable{
 	 * @param username the user to set
 	 */
 	public void setUsername(String username) {
+	    if (username.equals(null) || username.equals(""))
+	        throw new IllegalArgumentException("Invalid username");
+
 		this.username = username;
 	}
 	/**
@@ -88,6 +97,9 @@ public class User implements Serializable{
 	 * @param password the password to set
 	 */
 	public void setPassword(String password) {
+	    if (password.equals(null) || password.equals(""))
+	        throw new IllegalArgumentException("Invalid password");
+
 		this.password = password;
 	}
 	/**
@@ -100,6 +112,8 @@ public class User implements Serializable{
 	 * @param firstName the firstName to set
 	 */
 	public void setFirstName(String firstName) {
+        if (firstName.equals(null) || firstName.equals(""))
+            throw new IllegalArgumentException("Invalid name");
 		this.firstName = firstName;
 	}
 	/**

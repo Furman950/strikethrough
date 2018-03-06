@@ -12,7 +12,7 @@
             xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
 
     <children>
-        <Button fx:id="WeightTracker" layoutX="133.0" layoutY="350.0" prefHeight="100" prefWidth="311.0"
+        <Button fx:id="WeightTracker" onMouseClicked="#weightTracker" layoutX="133.0" layoutY="350.0" prefHeight="100" prefWidth="311.0"
                 text="Weight Tracker" textFill="WHITE">
             <effect>
                 <DropShadow height="255.0" radius="127.0" spread="0.5" width="255.0"/>
@@ -21,7 +21,7 @@
                 <Font name="Stencil" size="30.0"/>
             </font>
         </Button>
-        <Button fx:id="MealTracker" layoutX="358.0" layoutY="506.0" prefHeight="100" prefWidth="287.0"
+        <Button fx:id="MealTracker" onMouseClicked="#mealTracker" layoutX="358.0" layoutY="506.0" prefHeight="100" prefWidth="287.0"
                 text="Meal Tracker" textFill="WHITE">
             <effect>
                 <DropShadow height="255.0" radius="127.0" spread="0.5" width="255.0"/>
@@ -39,7 +39,7 @@
                 <Font name="Stencil" size="30.0"/>
             </font>
         </Button>
-        <Button fx:id="WorkoutPlanner" layoutX="548.0" layoutY="350.0" mnemonicParsing="false" prefHeight="100.0"
+        <Button fx:id="WorkoutPlanner" onMouseClicked="#workoutPlanner" layoutX="548.0" layoutY="350.0" mnemonicParsing="false" prefHeight="100.0"
                 prefWidth="332.0" text="Workout Planner" textFill="WHITE">
             <effect>
                 <DropShadow height="255.0" radius="127.0" spread="0.5" width="255.0"/>

@@ -2,55 +2,39 @@ package controller;
 
 import javafx.application.Platform;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
-import model.CustomWorkout;
-import model.Meal;
-import model.User;
-import model.Workout;
-
-import java.awt.event.MouseEvent;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import java.io.IOException;
 
-public class WorkoutController
-{
-        private StrikethroughMainController controller = new StrikethroughMainController();
-        private User userLoggedIn = controller.getUserLoggedIn();
+public class WorkoutController {
+    @FXML
+    private Label label;
 
-        private String workoutName, sets, reps;
-
-        @FXML
-        private TextField wName, set, rep;
-
-        @FXML
-        private Button submit;
-
-        @FXML
-        private Label label;
+    @FXML
+    AnchorPane workout, WorkoutGenerator, customWorkouts, mainMenu;
 
     @FXML
     public void initialize() {
-        Platform.runLater( () -> label.requestFocus() );
+        Platform.runLater(() -> label.requestFocus());
     }
 
-    public WorkoutController() throws IOException {
-        }
-    public void customWorkout(MouseEvent e) {
+    public WorkoutController() throws IOException {}
 
-        workoutName = wName.getText();
-        sets = set.getText();
-        reps = rep.getText();
-
-        Workout custom = new CustomWorkout(Integer.parseInt(reps), Integer.parseInt(sets), workoutName);
-
-        userLoggedIn.setWorkouts(custom);
-        System.out.println("click");
+    public void custom(MouseEvent mouseEvent) throws IOException {
+        customWorkouts = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/CustomWorkout.fxml"));
+        workout.getChildren().setAll(customWorkouts);
     }
 
-    public void generatedWorkout(MouseEvent e)
-    {
-
+    public void generate(MouseEvent mouseEvent) throws IOException {
+        WorkoutGenerator = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/WorkoutGenerator.fxml"));
+        workout.getChildren().setAll(WorkoutGenerator);
     }
 
+    public void goBack(MouseEvent mouseEvent) throws IOException {
+        mainMenu = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/MainMenu.fxml"));
+        workout.getChildren().setAll(mainMenu);
+
+    }
 }

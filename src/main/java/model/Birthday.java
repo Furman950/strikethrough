@@ -2,9 +2,12 @@ package model;
 
 import exceptions.InvalidBirthdayException;
 
+import java.io.Serializable;
 import java.util.Calendar;
 
-public class Birthday {
+public class Birthday implements Serializable {
+	private static final long serialVersionUID = 1L;
+
 	private int day;
 	private int month;
 	private int year;
@@ -24,9 +27,7 @@ public class Birthday {
         System.out.println(birthday[2]);
 
         if (birthday.length != 3){
-            System.out.println("in 3");
             throw new InvalidBirthdayException("Invalid birthday format!!");
-
         }
 
 

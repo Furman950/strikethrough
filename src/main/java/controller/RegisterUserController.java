@@ -21,7 +21,7 @@ public class RegisterUserController {
     private TextField uName, pWord, fName, weight, goalWeight, birthday;
 
     @FXML
-    private AnchorPane RegisterUser, MainMenu;
+    private AnchorPane RegisterUser, MainMenu, loginPage;
 
     @FXML
     private Label label;
@@ -60,7 +60,7 @@ public class RegisterUserController {
                 }
             }
 
-            User user = new User(username, password, firstName);
+            User user = new User(username, password, firstName, uWeight, uGoalWeight, uBirthday);
             strikethrough.getUserD().setUsers(user);
             strikethrough.saveData();
             login();
@@ -101,5 +101,11 @@ public class RegisterUserController {
                 }
             }
         }
+    }
+
+    public void goBack(MouseEvent mouseEvent) throws IOException {
+        loginPage = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/LoginPage.fxml"));
+        RegisterUser.getChildren().setAll(loginPage);
+
     }
 }

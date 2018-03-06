@@ -2,10 +2,12 @@ package controller;
 
 import javafx.application.Platform;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import model.Meal;
 import model.User;
 import model.UserData;
@@ -25,7 +27,7 @@ public class MealTrackerController {
     private TextField mName, kalories, tFat, sFat, usFat, NaCl, karbs, shugar, brotein, cholset, nServing, day;
 
     @FXML
-    private Button submit;
+    private AnchorPane meal, mainMenu;
 
     @FXML
     private Label label;
@@ -62,5 +64,10 @@ public class MealTrackerController {
 
         userLoggedIn.setMeals(date, meal);
         System.out.println("click");
+    }
+
+    public void goBack(MouseEvent mouseEvent) throws IOException {
+        mainMenu = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/MainMenu.fxml"));
+        meal.getChildren().setAll(mainMenu);
     }
 }

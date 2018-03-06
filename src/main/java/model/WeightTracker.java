@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Calendar;
+
 public class WeightTracker {
 
     private int weight;
@@ -16,5 +18,9 @@ public class WeightTracker {
 
     public void setWeight(int weight) {
         this.weight = weight;
+    }
+
+    public String toString() {
+        return "Weight: " + getWeight();
     }
 }

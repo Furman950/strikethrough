@@ -19,7 +19,7 @@ public class NewerLoginPageController {
     private TextField username, password;
 
     @FXML
-    private AnchorPane NewerLoginPage, MainMenu;
+    private AnchorPane NewerLoginPage, MainMenu, loginPage;
 
     @FXML
     private Label NewerLogin;
@@ -57,5 +57,10 @@ public class NewerLoginPageController {
 
     public void exit(MouseEvent mouseEvent) throws IOException {
         strikethrough.exit();
+    }
+
+    public void goBack(MouseEvent mouseEvent) throws IOException {
+        loginPage = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/LoginPage.fxml"));
+        NewerLoginPage.getChildren().setAll(loginPage);
     }
 }

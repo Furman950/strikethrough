@@ -9,6 +9,11 @@
 
 <AnchorPane fx:id="NewerLoginPage" fx:controller="controller.NewerLoginPageController" maxHeight="1080.0" maxWidth="1920.0" minHeight="400" minWidth="500" prefHeight="800" prefWidth="1020" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
    <children>
+      <Button fx:id="back" onMousePressed="#goBack" layoutX="14.0" layoutY="14.0" prefHeight="65.0" prefWidth="141.0" text="back" textFill="WHITE">
+         <effect>
+            <DropShadow height="255.0" radius="127.0" spread="0.5" width="255.0" />
+         </effect>
+      </Button>
       <TextField fx:id="password" layoutX="324.0" layoutY="557.0" prefHeight="65.0" prefWidth="373.0" promptText="Password" />
       <Label fx:id="NewerLogin" layoutX="373.0" layoutY="181.0" style="-fx-background-color: red;" text="Login" textFill="WHITE">
          <font>
