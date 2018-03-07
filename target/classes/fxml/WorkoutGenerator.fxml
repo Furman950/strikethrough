@@ -5,11 +5,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="WorkoutGenerator" maxHeight="800" maxWidth="1020" minHeight="400" minWidth="500" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SubWorkoutController">
+<AnchorPane fx:id="WorkoutGenerator" fx:controller="controller.SubWorkoutController" maxHeight="800" maxWidth="1020" minHeight="400" minWidth="500" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" >
 
     <children>
 
-        <Button fx:id="Register" layoutX="331.0" layoutY="518.0" prefHeight="100" prefWidth="358.0" text="Submit" textFill="WHITE">
+        <Button fx:id="submit" onMouseClicked="#generateWorkout" layoutX="331.0" layoutY="518.0" prefHeight="100" prefWidth="358.0" text="Submit" textFill="WHITE">
          <font>
             <Font name="Stencil" size="30.0" />
          </font></Button>

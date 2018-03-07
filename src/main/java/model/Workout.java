@@ -1,9 +1,15 @@
 package model;
 
-public class Workout 
+import java.io.Serializable;
+
+public class Workout implements Serializable
 {
+
+    private static final long serialVersionUID = 1L;
+
 	private int reps;
 	private int sets;
+	private String name;
 	
 	public Workout() {}
 	
@@ -11,12 +17,13 @@ public class Workout
 	 * @param reps
 	 * @param sets
 	 */
-	public Workout(int reps, int sets) {
-		super();
+	public Workout(String name, int reps, int sets) {
+	    this.setName(name);
 		this.setReps(reps);
 		this.setSets(sets);
 	}
-	/**
+
+    /**
 	 * @return the reps
 	 */
 	public int getReps() {
@@ -40,11 +47,19 @@ public class Workout
 	public void setSets(int sets) {
 		this.sets = sets;
 	}
-	
-	@Override
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
 	public String toString()
 	{
-		return "Sets: " + this.getSets() + "\nReps: " + this.getReps();
+		return "Name: " + this.getName() + ", Sets: " + this.getSets() + ", Reps: " + this.getReps();
 	}
 	
 	@Override

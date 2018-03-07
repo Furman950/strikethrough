@@ -7,36 +7,46 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="meal" maxHeight="800" maxWidth="1020" minHeight="400" minWidth="500" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MealTrackerController">
-   <children>
-      <Button fx:id="back" layoutX="14.0" layoutY="14.0" onMousePressed="#goBack" prefHeight="75.0" prefWidth="174.0" text="back" textFill="WHITE">
-         <font>
-            <Font name="Stencil" size="30.0" />
-         </font></Button>
-      <TextField fx:id="day" alignment="CENTER" layoutX="258.0" layoutY="347.0" prefHeight="99.0" prefWidth="494.0" promptText="Enter a Date">
-         <font>
-            <Font size="60.0" />
-         </font></TextField>
-      <Button fx:id="Submit" alignment="CENTER" contentDisplay="CENTER" layoutX="660.0" layoutY="645.0" mnemonicParsing="false" onMouseClicked="#mealTracker" prefHeight="68.0" prefWidth="185.0" text="Add" textAlignment="CENTER" textFill="WHITE">
-         <font>
-            <Font name="Stencil" size="36.0" />
-         </font>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Button>
-      <Label fx:id="label" layoutX="237.0" layoutY="125.0" text="Meal Tracker" textFill="WHITE">
-         <font>
-            <Font name="Stencil" size="72.0" />
-         </font>
-      </Label>
-      <Button fx:id="Submit1" alignment="CENTER" contentDisplay="CENTER" layoutX="166.0" layoutY="645.0" mnemonicParsing="false" onMouseClicked="#mealTracker" text="Search" textAlignment="CENTER" textFill="WHITE">
-         <font>
-            <Font name="Stencil" size="36.0" />
-         </font>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Button>
-   </children>
+<AnchorPane fx:id="meal" fx:controller="controller.MealTrackerController" maxHeight="800" maxWidth="1020"
+            minHeight="400" minWidth="500" prefHeight="1080.0" prefWidth="1920.0"
+            xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Button fx:id="back" layoutX="14.0" layoutY="14.0" onMousePressed="#goBack" prefHeight="75.0" prefWidth="174.0"
+                text="back" textFill="WHITE">
+            <font>
+                <Font name="Stencil" size="30.0"/>
+            </font>
+        </Button>
+        <TextField fx:id="tDay" alignment="CENTER" layoutX="258.0" layoutY="347.0" prefHeight="99.0" prefWidth="494.0"
+                   promptText="Enter a Date">
+            <font>
+                <Font size="60.0"/>
+            </font>
+        </TextField>
+        <Button fx:id="add" onMousePressed="#addMeal" alignment="CENTER" contentDisplay="CENTER" layoutX="660.0"
+                layoutY="645.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="185.0" text="Add"
+                textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font name="Stencil" size="36.0"/>
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND"/>
+            </cursor>
+        </Button>
+        <Label fx:id="label" layoutX="237.0" layoutY="125.0" text="Meal Tracker" textFill="WHITE">
+            <font>
+                <Font name="Stencil" size="72.0"/>
+            </font>
+        </Label>
+        <Button fx:id="search" alignment="CENTER" contentDisplay="CENTER" layoutX="166.0" layoutY="645.0"
+                mnemonicParsing="false" onMouseClicked="#searchMeal" text="Search" textAlignment="CENTER"
+                textFill="WHITE">
+            <font>
+                <Font name="Stencil" size="36.0"/>
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND"/>
+            </cursor>
+        </Button>
+    </children>
 </AnchorPane>

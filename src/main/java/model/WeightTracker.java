@@ -9,8 +9,6 @@ public class WeightTracker implements Serializable{
 
     private int weight;
 
-    public WeightTracker(){}
-
     public WeightTracker(int weight) {
         this.setWeight(weight);
     }

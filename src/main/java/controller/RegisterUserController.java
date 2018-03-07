@@ -89,7 +89,7 @@ public class RegisterUserController {
     }
 
     /**
-     * logs in an existing profile
+     * logs in an existing profile after they successfully register
      */
     public void login() throws IOException {
         username = uName.getText();
