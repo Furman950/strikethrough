@@ -8,13 +8,12 @@ public class User implements Serializable{
     private static final long serialVersionUID = 1L;
 
 	private List<Workout> workouts = new ArrayList<>();
-	private Map<String, Meal> meals = new HashMap<>();
+	private Map<Calendar, Meal> meals = new HashMap<>();
 	private Map<Calendar, WeightTracker> weights = new HashMap<>();
 	
 	private String username;
 	private String password;
 	private String firstName;
-	private int height;
 	private int weight;
 	private Birthday birthday;
 	private int goalWeight;
@@ -52,13 +51,13 @@ public class User implements Serializable{
 	/**
 	 * @return the meals
 	 */
-	public Map<String, Meal> getMeals() {
+	public Map<Calendar, Meal> getMeals() {
 		return meals;
 	}
 	/**
 	 * @param meal the meals to set
 	 */
-	public void setMeals(String date, Meal meal) {
+	public void setMeals(Calendar date, Meal meal) {
 		this.meals.put(date,meal);
 	}
 
@@ -116,18 +115,7 @@ public class User implements Serializable{
             throw new IllegalArgumentException("Invalid name");
 		this.firstName = firstName;
 	}
-	/**
-	 * @return the height
-	 */
-	public int getHeight() {
-		return height;
-	}
-	/**
-	 * @param height the height to set
-	 */
-	public void setHeight(int height) {
-		this.height = height;
-	}
+
 	/**
 	 * @return the weight
 	 */
@@ -169,7 +157,6 @@ public class User implements Serializable{
 	public String toString() {
 		return "User name: " + this.getUsername() + "\n" + 
 				"First name: " + this.getFirstName() + "\n" +
-				"Height: " + this.getHeight() + "\n" +
 				"Weight: " + this.getWeight() + "\n" +
 				"Weight goal: " + this.getGoalWeight() +
 				"Birthday: " + this.getBirthday() + "\n";

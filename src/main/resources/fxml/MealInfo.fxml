@@ -5,7 +5,6 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.effect.DropShadow?>
 
 <AnchorPane fx:id="mealInfo" maxHeight="800" maxWidth="1020" minHeight="400" minWidth="500" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MealTrackerController">
    <children>
@@ -20,7 +19,7 @@
       <TextField fx:id="shugar" layoutX="710.0" layoutY="368.0" prefHeight="65.0" prefWidth="276.0" promptText="Sugar" />
       <TextField fx:id="brotein" layoutX="152.0" layoutY="497.0" prefHeight="65.0" prefWidth="276.0" promptText="Protein" />
       <TextField fx:id="cholset" layoutX="572.0" layoutY="497.0" prefHeight="65.0" prefWidth="276.0" promptText="Cholesterol" />
-      <Button fx:id="submit" alignment="CENTER" contentDisplay="CENTER" layoutX="420.0" layoutY="606.0" mnemonicParsing="false" onMouseClicked="#mealInfo" text="Submit" textAlignment="CENTER" textFill="WHITE">
+      <Button fx:id="submit" alignment="CENTER" contentDisplay="CENTER" layoutX="420.0" layoutY="606.0" mnemonicParsing="false" onMousePressed="#submitMeal" text="Submit" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font size="36.0" />
          </font>
@@ -30,5 +29,10 @@
             <Font name="Stencil" size="72.0" />
          </font>
       </Label>
+      <Button fx:id="back" alignment="CENTER" contentDisplay="CENTER" layoutX="6.0" layoutY="14.0" mnemonicParsing="false" onMousePressed="#back" text="back" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
